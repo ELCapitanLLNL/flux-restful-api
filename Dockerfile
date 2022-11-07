@@ -21,6 +21,7 @@ RUN python3 -m pip install -r /requirements.txt
 
 WORKDIR /code
 COPY . /code
+RUN chmod -R g+rx /code
 ENV FLUX_USER=${user}
 ENV FLUX_TOKEN=${token}
 ENV FLUX_REQUIRE_AUTH=${use_auth}
